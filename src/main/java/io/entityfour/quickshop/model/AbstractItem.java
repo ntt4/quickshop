@@ -1,7 +1,5 @@
 package io.entityfour.quickshop.model;
 
-import io.entityfour.quickshop.service.InventoryService;
-
 public abstract class AbstractItem implements InventoryItem {
 
   private final String name;
