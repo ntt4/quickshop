@@ -1,7 +1,5 @@
 package io.entityfour.quickshop.model;
 
-import java.math.BigDecimal;
-
 public class FruitItem extends AbstractItem {
 
   public FruitItem(String name, double basePrice, int daysToExpire, int quality) {

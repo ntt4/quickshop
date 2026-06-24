@@ -1,7 +1,5 @@
 package io.entityfour.quickshop.model;
 
-import io.entityfour.quickshop.service.InventoryService;
-
 public abstract class AbstractItem implements InventoryItem {
 
   private final String name;
@@ -13,7 +11,7 @@ public abstract class AbstractItem implements InventoryItem {
     this.name = name;
     this.basePrice = basePrice;
     this.daysToExpire = daysToExpire;
-    this.quality = Math.clamp(quality, 0, 50);
+    this.quality = Math.max(0, Math.min(50, quality));
   }
 
   protected void adjustQuality(int amount) {
